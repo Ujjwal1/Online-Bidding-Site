@@ -1,0 +1,52 @@
+At USER END:
+
+While Registration:
+A default spot having name "user-1" for the new user having user name "user" will be created.
+
+
+At login page:
+In the "Pick Table(s)", the pick of a "User" is shown. Suppose a user "A" have 3 spots, A-1,A-2,A-3. And from A-1 pick is "Bengals" from A-2 pick is "Giant" and from A-3 pick is "Bills"
+Then the row of table will be like: 
+A : Bengals | Giant | Bills
+i.e picks of all the users, separated by pipe(|).
+
+After successful login, instead of directing to index.php , u are redirected to choose_spot.php where you choose your default spot. And then you are redirected back to your home
+There, you have spot-name with 'coloured' activation state indication. And the "Current Pool Point"
+Then the Picks show only the picks of the spot from which you are logged in.
+
+In "My Pick Details":
+There are 2 funtionalities present there.
+a) Coloured Picks Table: It shows all the picks of the particular 'USER' spot-wise who is logged in. and the lcolour in spotID is according to the current spot's State.
+Suppose you are "Active" and you picked a team then the team and spotID will be in green colour. But after result updation, if the chosen team looses the match then the 
+team as well spotID cell's colour will be changed to Orange(for Deactivation). And the the colour associated with the team after the result-updation will remain fixed.
+
+b) Pick Table: It have the list of picked team by the logged-in spot. And the state of pick(Delete it/Already Locked) is associated with it.
+And user can make changes for the picked team from here only but only if, the team is not locked by the Admin.
+
+
+
+Register Spot(or I better say "Manage Spot"):
+Have 3 options:
+a)"Change the Current Spot": If user wants to switch his/her spot then  it is done through this link.
+b)"Create new Spot": on clicking on "Create" automatically a new spot will be created and the user have the right to delete it before it is verified.
+c) "Delete unverified Spots": From here you can delete the unverified spots.
+
+
+Results link:
+Here you will get the All users(according to there spot) Result. I is similar to the "Coloured Pick Table" but the only difference is-
+It shows the result of each and every "verified" spot.
+It doesn't shows the pick of a spot until it is locked and result is uploaded.
+
+
+
+At ADMIN end:
+
+"Set default Pick": Enter the week number and you have a list of all the matches in that week along with an option saying-
+"Look for users with No Picks: <button>Look for them</button>"
+On clicking the button you are supplied with the list of spotID who hadn't made pick for "that particular week".
+
+In "Reactivate" and "Verify" link-
+
+Added the option reactivate/verify the spot also.
+(But, now I think that there is no use/ existence of the term "verify user" or "reactivate user" as all the work is done only with the spot, irrespective of the Activation state of user)
+Should I remove it?
